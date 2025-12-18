@@ -4,12 +4,6 @@ import products from "../database.json";
 export default function Products() {
   return (
     <section>
-      <header>
-        <nav style={{ display: "flex", gap: "2rem" }}>
-          <Link to="/products">Produtos</Link>
-          <Link to="/cart">Carrinho</Link>
-        </nav>
-      </header>
       <h2>Todos os produtos</h2>
       <p>Confira todas as nossas ofertas.</p>
       <section className="products">
@@ -19,7 +13,9 @@ export default function Products() {
             <li key={product.id}>
               <h4>{product.name}</h4>
               <p>R$ {product.price}</p>
-              <button>Ver</button>
+              <Link to={`/products/${product.id}`}>
+                <button>Ver</button>
+              </Link>
               <button>Compras</button>
             </li>
           ))}
