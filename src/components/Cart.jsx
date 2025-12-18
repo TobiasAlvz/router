@@ -1,14 +1,9 @@
-import { Link } from "react-router-dom";
+
 
 export default function Cart() {
   return (
     <section>
-      <header>
-        <nav style={{ display: "flex", gap: "2rem" }}>
-          <Link to="/products">Produtos</Link>
-          <Link to="/cart">Carrinho</Link>
-        </nav>
-      </header>
+    
       <h2>Carrinho</h2>
       <p>Os produtos atualmente em seu carrinho.</p>
       <ul>
