@@ -5,6 +5,8 @@ import Cart from "./components/Cart";
 import RootLayout from "./components/layout";
 import Admin from "./components/Admin";
 import Product from "./components/Product";
+import { adminLoader, loadProduct } from "./loaders/products";
+import ProductBoundary from "./error-boundaries/ProductBoundary";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,8 @@ const router = createBrowserRouter([
       {
         path: "products/:productId",
         element: <Product />,
+        loader: loadProduct,
+        errorElement: <ProductBoundary />,
       },
       {
         path: "cart",
@@ -32,6 +36,8 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: <Admin />,
+    loader: adminLoader,
+    errorElement: <ProductBoundary />,
   },
 ]);
 export default router;
