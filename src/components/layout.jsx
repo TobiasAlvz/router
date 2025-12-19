@@ -8,7 +8,6 @@ export default function RootLayout() {
           <Link to="/">Início</Link>
           <Link to="/products">Produtos</Link>
           <Link to="/cart">Carrinho</Link>
-          <Link to="/admin">Administração</Link>
         </nav>
       </header>
       <main>
